@@ -67,15 +67,28 @@ The text inside the square brackets `[]` is the short version of the title or au
 After making these changes, save the `front_page.tex` file and recompile your LaTeX document to see the changes on the title page.
 
 ## Preamble
-
 The `preamble` directory contains various setup files and configurations for the LaTeX document. These files define the overall style, layout, and other settings of the document.
 
 The main file in this directory is `preamble.tex`. This file includes all the necessary packages and configurations for the document. It sets up the document class, loads the necessary LaTeX packages, defines new commands, and sets layout parameters.
 
 To modify the overall settings of the document, you can edit the `preamble.tex` file or add new setup files to the `preamble` directory and include them in the `preamble.tex` file.
-## Contributing
 
+## Download The PDF
+The `main.pdf` file is generated as an artifact of the GitHub Actions workflow defined in the `build.yml` file. After the LaTeX document is compiled, the `main.pdf` file is uploaded as an artifact.
+
+To find and download the `main.pdf` file, follow these steps:
+
+1. Go to your GitHub repository where the workflow is running.
+2. Click on the "Actions" tab.
+3. Click on the workflow run you're interested in. This will usually be the most recent run, but you can also select a previous run.
+4. In the workflow run summary page, scroll down to the "Artifacts" section.
+5. Click on the `main.pdf` artifact to download it.
+
+The downloaded file will be a ZIP archive containing the `main.pdf` file. You can extract this file to view the PDF document.
+
+## Contributing
 If you want to contribute to this project, feel free to fork this repository, make your changes, and submit a pull request.
+
 
 ## License
 
