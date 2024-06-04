@@ -19,8 +19,13 @@ jobs:
     - name: Check pdf files
       run: |
         file main.pdf | grep -q ' PDF '
+    - name: Rename pdf file
+      run: |
+        DATE=$(date +%Y-%m-%d)
+        COMMIT_HASH=$(git rev-parse --short HEAD)
+        mv main.pdf "main_${DATE}_${COMMIT_HASH}.pdf"
     - name: Upload
       uses: actions/upload-artifact@master
       with:
         name: main.pdf
-        path: main.pdf
+        path: "main_${DATE}_${COMMIT_HASH}.pdf"
